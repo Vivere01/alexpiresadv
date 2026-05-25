@@ -248,7 +248,12 @@ a {
     width: auto;
     object-fit: contain;
     z-index: 3;
-    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 20px rgba(179, 139, 77, 0.35)); /* Leve brilho dourado seguindo o contorno da silhueta */
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.doctor-img:hover {
+    filter: drop-shadow(0 0 35px rgba(179, 139, 77, 0.55)); /* Brilho dourado ligeiramente intensificado no hover */
 }
 
 .quote-box {
