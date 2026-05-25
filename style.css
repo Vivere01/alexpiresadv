@@ -38,6 +38,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -46,12 +47,16 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h1, h2, h3 {
@@ -270,6 +275,7 @@ a {
     padding-top: 80px;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 /* Geometric red accent top-right */
@@ -309,6 +315,7 @@ a {
     position: relative;
     z-index: 2;
     gap: 0;
+    width: 100%;
 }
 
 .hero-text-area {
@@ -319,6 +326,7 @@ a {
     flex-direction: column;
     justify-content: center;
     padding-top: 60px;
+    min-width: 0;
 }
 
 .hero-eyebrow {
@@ -341,6 +349,9 @@ a {
     letter-spacing: 2px;
     margin-bottom: 16px;
     color: var(--text-main);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .hero-text-area h1 .highlight {
@@ -362,6 +373,8 @@ a {
     margin-bottom: 28px;
     line-height: 1.8;
     max-width: 520px;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Area Pills */
@@ -404,12 +417,14 @@ a {
 
 .trust-badge {
     color: var(--text-muted);
-    font-size: 0.72rem;
-    letter-spacing: 1.5px;
+    font-size: 0.68rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
+    word-break: break-word;
 }
 
 .trust-badge i {
@@ -425,6 +440,7 @@ a {
     align-items: flex-end;
     justify-content: center;
     min-height: calc(100vh - 80px);
+    min-width: 0;
 }
 
 .justice-wrapper {
@@ -1293,6 +1309,9 @@ a {
     .hero-text-area h1 {
         font-size: 4rem;
     }
+    .about-container {
+        gap: 50px;
+    }
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1304,6 +1323,7 @@ a {
     }
 }
 
+/* Tablets */
 @media (max-width: 900px) {
     .nav {
         display: none;
@@ -1314,13 +1334,8 @@ a {
     .btn-calendar {
         display: none;
     }
-    .hero-content {
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 0;
-        min-height: auto;
-        padding-top: 40px;
-    }
+
+    /* Hero */
     .hero::before {
         width: 100%;
         clip-path: none;
@@ -1329,13 +1344,23 @@ a {
         bottom: 0;
         background: linear-gradient(to bottom, transparent, #f5f5f5);
     }
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 0;
+        min-height: auto;
+        padding-top: 30px;
+        gap: 0;
+    }
     .hero-text-area {
         flex: none;
         width: 100%;
         text-align: center;
         align-items: center;
         padding-right: 0;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
     .hero-description {
         max-width: 100%;
@@ -1343,25 +1368,29 @@ a {
     .hero-visuals {
         flex: none;
         width: 100%;
-        min-height: 480px;
-        height: 480px;
+        min-height: 380px;
+        height: 380px;
         justify-content: center;
     }
     .justice-wrapper {
         justify-content: center;
     }
     .justice-img {
-        max-height: 460px;
+        max-height: 360px;
         height: 100%;
+        width: auto;
+        max-width: 100%;
     }
+
+    /* About */
     .about-container {
         flex-direction: column;
-        gap: 50px;
+        gap: 40px;
     }
     .about-image-col {
         flex: none;
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         margin: 0 auto;
     }
     .about-card-col {
@@ -1383,25 +1412,38 @@ a {
     }
 }
 
+/* Mobile landscape / large phones */
 @media (max-width: 768px) {
     .header-container {
-        height: 68px;
+        height: 64px;
+        padding: 0 16px;
     }
     .logo {
-        height: 38px;
+        height: 36px;
+    }
+    .logo-text {
+        font-size: 0.78rem;
     }
     .hero {
-        padding-top: 68px;
+        padding-top: 64px;
+        min-height: 100svh;
     }
     .hero-text-area h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
+        letter-spacing: 1px;
     }
     .hero-mission {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.8px;
     }
+    .hero-description {
+        font-size: 0.92rem;
+    }
+
+    /* Area blocks */
     .area-block {
         flex-direction: column;
-        gap: 16px;
+        gap: 14px;
     }
     .area-icon-col {
         flex-direction: row;
@@ -1418,89 +1460,248 @@ a {
     }
     .area-content {
         margin-left: 0;
-        padding: 28px 22px;
+        padding: 24px 18px;
     }
     .area-content h3 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
+    .area-services {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .area-cta {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Grids */
     .diferenciais-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
     .testimonials-grid {
         grid-template-columns: 1fr;
-    }
-    .about-stats {
-        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
-    .section-title {
-        font-size: 2.2rem;
-    }
-    .footer-container {
-        flex-direction: column;
-        gap: 28px;
-    }
-    .area-pills {
-        justify-content: center;
-    }
-    .hero-buttons {
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
-        max-width: 320px;
-    }
-    .hero-buttons .btn {
-        justify-content: center;
-    }
-    .trust-badge {
-        justify-content: center;
-    }
-    .whatsapp-float {
-        width: 52px;
-        height: 52px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-    .hero-text-area h1 {
-        font-size: 2.3rem;
-    }
-    .hero-mission {
-        font-size: 0.95rem;
-    }
-    .section-title {
-        font-size: 1.9rem;
-    }
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
-    }
-    .stat-number {
-        font-size: 1.6rem;
+        gap: 14px;
     }
     .about-badges {
         grid-template-columns: repeat(2, 1fr);
     }
-    .justice-img {
-        max-height: 360px;
+
+    /* Sections */
+    .section-title {
+        font-size: 1.9rem;
     }
-    .hero-visuals {
-        min-height: 380px;
-        height: 380px;
+    .section-header {
+        margin-bottom: 40px;
     }
-    .marquee-item {
-        font-size: 0.68rem;
-        padding: 0 24px;
+    .areas-section,
+    .about-section,
+    .diferenciais-section,
+    .testimonials-section {
+        padding: 70px 0;
+    }
+    .cta-section {
+        padding: 70px 0;
+    }
+
+    /* Hero buttons */
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        gap: 10px;
+    }
+    .hero-buttons .btn {
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .area-pills {
+        justify-content: center;
+    }
+    .trust-badge {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.64rem;
+        letter-spacing: 0.8px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 0 0;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .footer-brand,
+    .footer-contact,
+    .footer-areas-col,
+    .footer-social {
+        flex: none;
+        width: 100%;
+    }
+
+    /* CTA */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
     }
     .cta-content h2 {
         font-size: 1.8rem;
     }
+
+    /* WhatsApp float */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 18px;
+        right: 16px;
+        font-size: 22px;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    /* Hero */
+    .hero-text-area h1 {
+        font-size: 2.1rem;
+        letter-spacing: 0.5px;
+    }
+    .hero-mission {
+        font-size: 0.88rem;
+        letter-spacing: 0.5px;
+    }
+    .hero-description {
+        font-size: 0.88rem;
+    }
+    .hero-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+    .hero-visuals {
+        min-height: 320px;
+        height: 320px;
+    }
+    .justice-img {
+        max-height: 300px;
+    }
+
+    /* Pills */
+    .pill {
+        font-size: 0.65rem;
+        padding: 6px 12px;
+    }
+
+    /* Section typography */
+    .section-title {
+        font-size: 1.7rem;
+    }
+    .section-eyebrow {
+        font-size: 0.62rem;
+        letter-spacing: 2.5px;
+    }
+
+    /* Stats */
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 20px 0;
+    }
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    /* Cards */
+    .diferencial-card {
+        padding: 26px 20px;
+    }
+    .testimonial-card {
+        padding: 24px 18px;
+    }
+    .about-card {
+        padding: 24px 20px;
+    }
+
+    /* Marquee */
+    .marquee-item {
+        font-size: 0.64rem;
+        padding: 0 20px;
+    }
+
+    /* Buttons */
+    .btn {
+        font-size: 0.72rem;
+        padding: 12px 18px;
+    }
+    .btn-lg {
+        padding: 14px 28px;
+        font-size: 0.82rem;
+    }
+
+    /* Area content */
     .area-content {
-        padding: 22px 16px;
+        padding: 20px 14px;
+    }
+    .area-content h3 {
+        font-size: 1.05rem;
+    }
+    .area-service-item {
+        font-size: 0.82rem;
+    }
+}
+
+/* Extra small phones (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 12px;
+    }
+    .hero-text-area h1 {
+        font-size: 1.85rem;
+    }
+    .hero-mission {
+        font-size: 0.82rem;
+    }
+    .section-title {
+        font-size: 1.55rem;
+    }
+    .logo-text {
+        font-size: 0.72rem;
+    }
+    .hero-buttons {
+        max-width: 260px;
+    }
+    .hero-visuals {
+        min-height: 280px;
+        height: 280px;
+    }
+    .justice-img {
+        max-height: 260px;
+    }
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-badges {
+        grid-template-columns: 1fr 1fr;
+    }
+    .cta-content h2 {
+        font-size: 1.5rem;
     }
 }
