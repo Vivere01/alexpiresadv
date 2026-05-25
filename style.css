@@ -151,18 +151,19 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Push marquee to bottom */
+    overflow: hidden; /* Corta o excesso da imagem do doutor na base */
 }
 
 .hero::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -5%;
-    width: 45%;
+    left: -10%; /* Estátua mais pra esquerda */
+    width: 35%; /* Ocupando menos espaço lateral */
     height: 100%;
-    background: url("assets/estatua-justica.png") no-repeat left bottom;
+    background: url("assets/estatua-justica.png") no-repeat left center; /* Centralizada verticalmente */
     background-size: contain;
-    opacity: 0.25;
+    opacity: 0.15; /* Levemente mais suave */
     z-index: 0;
     pointer-events: none;
 }
@@ -177,7 +178,8 @@ a {
 }
 
 .hero-text-area {
-    flex: 0 0 50%;
+    flex: 0 0 55%; /* Mais largo */
+    padding-left: 80px; /* Empurra o texto mais pro centro, distanciando da estátua */
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
@@ -239,14 +241,13 @@ a {
 
 .doctor-img {
     position: absolute;
-    bottom: 0;
+    bottom: -15%; /* Move a imagem para baixo, escondendo as pernas/bolsos */
     left: 10%;
-    max-height: 90%;
+    height: 115%; /* Aumenta a escala para manter a proporção e focar do peito pra cima */
     width: auto;
     object-fit: cover;
     object-position: top;
     z-index: 3;
-    /* This anchors the image to the bottom, effectively cutting the legs if the image is taller */
 }
 
 .quote-box {
