@@ -178,7 +178,7 @@ a {
 }
 
 .hero-text-area {
-    flex: 0 0 55%; /* Mais largo */
+    flex: 0 0 50%;
     padding-left: 80px; /* Empurra o texto mais pro centro, distanciando da estátua */
     padding-bottom: 50px;
     display: flex;
@@ -241,13 +241,14 @@ a {
 
 .doctor-img {
     position: absolute;
-    bottom: -15%; /* Move a imagem para baixo, escondendo as pernas/bolsos */
-    left: 10%;
-    height: 115%; /* Aumenta a escala para manter a proporção e focar do peito pra cima */
+    bottom: 0; /* Ancorado perfeitamente à base */
+    left: 5%;
+    height: 105%; /* Deixa a foto maior */
+    max-height: 700px;
     width: auto;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
     z-index: 3;
+    transition: all 0.3s ease;
 }
 
 .quote-box {
@@ -385,6 +386,84 @@ a {
     margin-bottom: 40px;
 }
 
+.footer-brand {
+    flex: 1 1 250px;
+}
+
+.footer-logo {
+    height: 45px; /* Deixa a logo bem menor, proporcional */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-contact, .footer-social {
+    flex: 1 1 200px;
+}
+
+.footer-contact h4,
+.footer-social h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-contact p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact p i {
+    color: var(--gold);
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--gold);
+    color: #000;
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
 /* Animations */
 .reveal {
     opacity: 0;
@@ -398,12 +477,203 @@ a {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .hero-content { flex-direction: column; }
-    .hero-text-area { flex: none; width: 100%; text-align: center; padding-bottom: 0; }
-    .hero-buttons { justify-content: center; flex-wrap: wrap; }
-    .trust-badge { justify-content: center; }
-    .hero-visuals { flex: none; height: 500px; margin-top: 40px; }
-    .doctor-img { left: 50%; transform: translateX(-50%); }
-    .quote-box { display: none; /* Hide on mobile/tablet to save space */ }
-    .nav { display: none; }
+    .container {
+        padding: 0 30px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-text-area {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .trust-badge {
+        justify-content: center;
+    }
+    
+    .hero-visuals {
+        flex: none;
+        height: 520px;
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+    .doctor-img {
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        max-height: 500px;
+    }
+    
+    .quote-box {
+        display: none; /* Hide on tablets and mobiles for a clean look */
+    }
+    
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Responsive Header */
+    .header {
+        height: 70px;
+    }
+    
+    .header-container {
+        height: 70px;
+        padding: 0 20px;
+    }
+    
+    .logo-area {
+        gap: 10px;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .btn-calendar {
+        padding: 10px 16px;
+        font-size: 0.7rem;
+        gap: 6px;
+    }
+    
+    /* Responsive Hero */
+    .hero {
+        padding-top: 100px;
+    }
+    
+    .hero::before {
+        opacity: 0.08; /* Soften statue opacity when centered */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        background-position: center center;
+    }
+    
+    .hero-text-area h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-text-area h1 br,
+    .hero-text-area p br {
+        display: none; /* Let text flow naturally on mobile */
+    }
+    
+    .hero-mission {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text-area p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        max-width: 550px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto 25px;
+        gap: 12px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+    
+    .hero-visuals {
+        height: 450px;
+    }
+    
+    /* Services Section */
+    .services {
+        padding: 70px 0;
+    }
+    
+    .services-header .section-title {
+        font-size: 2.2rem;
+    }
+    
+    /* Footer Section */
+    .footer {
+        padding: 50px 0 20px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-contact p {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-text-area h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-mission {
+        font-size: 1.15rem;
+    }
+    
+    .hero-text-area p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .hero-visuals {
+        height: 380px;
+    }
+    
+    .marquee-container {
+        padding: 18px 0;
+        margin-top: 30px;
+    }
+    
+    .marquee-item {
+        padding: 0 20px;
+        font-size: 0.75rem;
+    }
+    
+    .services-header .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 30px 15px;
+    }
 }
