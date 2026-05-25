@@ -51,8 +51,8 @@ reveal(); // trigger on load
 const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
-        header.style.borderBottom = '1px solid rgba(179, 139, 77, 0.2)';
-        header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
+        header.style.borderBottom = '1px solid var(--border)';
+        header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.05)';
     } else {
         header.style.borderBottom = '';
         header.style.boxShadow = '';
@@ -75,7 +75,7 @@ function highlightNav() {
     navLinks.forEach(link => {
         link.style.color = '';
         if (link.getAttribute('href') === '#' + current) {
-            link.style.color = 'var(--gold)';
+            link.style.color = 'var(--primary-red)';
         }
     });
 }
