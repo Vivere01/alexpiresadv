@@ -762,16 +762,15 @@ a {
 }
 
 .about-img {
-    width: auto;
-    height: 98%;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: var(--transition);
 }
 
 .about-image-wrapper:hover .about-img {
-    transform: scale(1.03) translateY(-2px);
-    filter: drop-shadow(0 12px 24px rgba(201, 44, 44, 0.18));
+    transform: scale(1.05);
 }
 
 .about-text {
