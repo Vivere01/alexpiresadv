@@ -524,7 +524,29 @@ a {
     }
     
     .quote-box {
-        display: none; /* Hide on tablets and mobiles for a clean look */
+        display: block;
+        position: absolute;
+        right: 4%;
+        top: 15%;
+        width: 170px;
+        z-index: 4;
+        text-align: left;
+    }
+    
+    .quote-box .quote-icon {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+    
+    .quote-box .typewriter {
+        font-size: 0.78rem;
+        min-height: 100px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    
+    .quote-box .quote-author {
+        font-size: 0.75rem;
     }
     
     .nav {
@@ -613,6 +635,33 @@ a {
         height: 450px;
     }
     
+    .quote-box {
+        display: block;
+        position: absolute;
+        right: 4%;
+        top: 15%; /* Alinhado ao lado da cabeça do Doutor */
+        width: 125px; /* Compacto para mobile */
+        z-index: 4;
+        text-align: left;
+    }
+    
+    .quote-box .quote-icon {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+    
+    .quote-box .typewriter {
+        font-size: 0.68rem; /* Tamanho mini e legível */
+        line-height: 1.4;
+        min-height: 80px; /* Reduz altura de reserva */
+        margin-bottom: 8px;
+        color: rgba(240, 240, 240, 0.7);
+    }
+    
+    .quote-box .quote-author {
+        font-size: 0.65rem;
+    }
+    
     /* Services Section */
     .services {
         padding: 70px 0;
@@ -662,6 +711,28 @@ a {
     
     .hero-visuals {
         height: 380px;
+    }
+    
+    .quote-box {
+        right: 2%;
+        top: 15%;
+        width: 105px; /* Super compacto para celulares pequenos */
+    }
+    
+    .quote-box .typewriter {
+        font-size: 0.62rem;
+        min-height: 70px;
+        line-height: 1.35;
+        margin-bottom: 6px;
+    }
+    
+    .quote-box .quote-icon {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    
+    .quote-box .quote-author {
+        font-size: 0.6rem;
     }
     
     .marquee-container {
