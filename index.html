@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Pires - Advogado Criminalista</title>
+    <title>Alex Pires - Advocacia Criminal</title>
     <meta name="description" content="Alex Pires, Advogado Criminalista especialista em audiência de custódia e defesas urgentes. Atendimento 24h.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,72 +15,109 @@
 <body>
     <header class="header">
         <div class="container header-container">
-            <img src="assets/logo - Alex Pires.jpeg" alt="Logo Alex Pires Advogado" class="logo">
+            <div class="logo-area">
+                <img src="assets/logo - Alex Pires.jpeg" alt="Logo Alex Pires Advogado" class="logo">
+                <div class="logo-text">ADVOCACIA<br>CRIMINAL</div>
+            </div>
             <nav class="nav">
                 <a href="#sobre">Sobre</a>
                 <a href="#areas">Áreas de Atuação</a>
-                <a href="#contato" class="btn btn-outline">Contato</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#blog">Blog</a>
             </nav>
+            <a href="https://wa.me/5521992044079" target="_blank" class="btn btn-calendar">
+                <i class="fa-regular fa-calendar"></i> Agendar Consulta
+            </a>
         </div>
     </header>
 
     <main>
-        <section class="hero reveal">
+        <section class="hero">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
-                <div class="hero-text">
-                    <h1>Defesa Penal <span>Estratégica</span> e <span>Urgente</span></h1>
-                    <p>Atuação especializada em audiências de custódia e emergências criminais. Seu direito à liberdade defendido com excelência e combatividade.</p>
-                    <a href="https://wa.me/5521992044079" target="_blank" class="btn btn-primary">Falar com Advogado Agora</a>
+                <div class="hero-text-area reveal">
+                    <h3 class="hero-subtitle">DEFESA PENAL ESTRATÉGICA</h3>
+                    <h1>LIBERDADE É<br><span class="highlight">UM DIREITO.</span></h1>
+                    <h2 class="hero-mission">SUA DEFESA É NOSSA MISSÃO.</h2>
+                    <p>Atuação especializada em audiências de custódia<br>e emergências criminais, com excelência,<br>combatividade e estratégia.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5521992044079" target="_blank" class="btn btn-primary">
+                            <i class="fa-solid fa-scale-balanced"></i> FALAR COM ADVOGADO AGORA
+                        </a>
+                        <a href="https://wa.me/5521992044079" target="_blank" class="btn btn-outline-white">
+                            <i class="fa-brands fa-whatsapp"></i> ATENDIMENTO 24H
+                        </a>
+                    </div>
+                    
+                    <div class="trust-badge">
+                        <i class="fa-solid fa-shield-halved"></i> ATENDIMENTO SIGILOSO E IMEDIATO
+                    </div>
                 </div>
-                <div class="hero-image-wrapper">
-                    <img src="assets/Perfil - Alex Pires.png" alt="Alex Pires - Advogado" class="hero-profile">
+
+                <div class="hero-visuals">
+                    <img src="assets/Perfil - Alex Pires.png" alt="Dr. Alex Pires" class="doctor-img">
+                    
+                    <div class="quote-box">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <div class="typewriter" id="typewriter-text"></div>
+                        <p class="quote-author">– Dr. Alex Pires</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marquee Carousel -->
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <div class="marquee-item"><i class="fa-solid fa-bolt"></i> ATENDIMENTO IMEDIATO 24H</div>
+                    <div class="marquee-item"><i class="fa-solid fa-shield-halved"></i> ESPECIALISTA EM AUDIÊNCIAS DE CUSTÓDIA</div>
+                    <div class="marquee-item"><i class="fa-solid fa-map-location-dot"></i> ATUAÇÃO NACIONAL</div>
+                    <div class="marquee-item"><i class="fa-solid fa-chess-knight"></i> ESTRATÉGIA PERSONALIZADA</div>
+                    <div class="marquee-item"><i class="fa-solid fa-lock"></i> SIGILO ABSOLUTO E ÉTICA PROFISSIONAL</div>
+                    <!-- Duplicate for infinite effect -->
+                    <div class="marquee-item"><i class="fa-solid fa-bolt"></i> ATENDIMENTO IMEDIATO 24H</div>
+                    <div class="marquee-item"><i class="fa-solid fa-shield-halved"></i> ESPECIALISTA EM AUDIÊNCIAS DE CUSTÓDIA</div>
+                    <div class="marquee-item"><i class="fa-solid fa-map-location-dot"></i> ATUAÇÃO NACIONAL</div>
+                    <div class="marquee-item"><i class="fa-solid fa-chess-knight"></i> ESTRATÉGIA PERSONALIZADA</div>
+                    <div class="marquee-item"><i class="fa-solid fa-lock"></i> SIGILO ABSOLUTO E ÉTICA PROFISSIONAL</div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="about reveal">
-            <div class="container about-container">
-                <div class="about-image">
-                    <img src="assets/Banner com logo - Alex Pires.jpeg" alt="Escritório Alex Pires">
-                </div>
-                <div class="about-text">
-                    <h2>Sobre Alex Pires</h2>
-                    <p>Com forte atuação na área criminal, o escritório foca na proteção intransigente dos direitos e garantias fundamentais dos nossos clientes.</p>
-                    <p>Nosso compromisso é com a atuação ágil, técnica e discreta, garantindo que o cliente tenha a melhor estratégia de defesa desde o primeiro momento, especialmente nas situações mais críticas.</p>
-                    <p><strong>OAB/RJ: 244624</strong></p>
-                </div>
-            </div>
-        </section>
-
+        <!-- (Other sections remain simplified for now, as focus is Hero overhaul) -->
         <section id="areas" class="services reveal">
             <div class="container">
-                <h2 class="section-title">Especialidades</h2>
+                <div class="services-header">
+                    <h3 class="hero-subtitle">ÁREAS DE ATUAÇÃO</h3>
+                    <h2 class="section-title">Defesa Penal Completa</h2>
+                    <p>Atuação estratégica em todas as fases do processo penal, com foco na proteção dos seus direitos e na conquista dos melhores resultados.</p>
+                </div>
                 <div class="services-grid">
                     <div class="service-card">
                         <i class="fa-solid fa-gavel service-icon"></i>
-                        <h3>Audiência de Custódia</h3>
-                        <p>Atuação imediata após a prisão em flagrante, com defesa oral focada na busca pela liberdade provisória ou relaxamento da prisão.</p>
+                        <h3>Audiências de Custódia</h3>
                     </div>
                     <div class="service-card">
-                        <i class="fa-solid fa-shield-halved service-icon"></i>
-                        <h3>Defesas Urgentes</h3>
-                        <p>Atendimento 24 horas para acompanhamento em delegacias, mandados de busca e apreensão e representações de prisões preventivas.</p>
+                        <i class="fa-solid fa-handcuffs service-icon"></i>
+                        <h3>Prisão em Flagrante</h3>
                     </div>
                     <div class="service-card">
-                        <i class="fa-solid fa-scale-balanced service-icon"></i>
-                        <h3>Advocacia Criminal</h3>
-                        <p>Defesa técnica especializada em processos criminais de todas as complexidades, atuando com total discrição e vigor.</p>
+                        <i class="fa-solid fa-shield service-icon"></i>
+                        <h3>Habeas Corpus</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-file-contract service-icon"></i>
+                        <h3>Recursos Criminais</h3>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-users service-icon"></i>
+                        <h3>Tribunal do Júri</h3>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5521992044079" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
 
     <footer id="contato" class="footer">
         <div class="container footer-container">
