@@ -3,127 +3,373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Pires - Advocacia Criminal</title>
-    <meta name="description" content="Alex Pires, Advogado Criminalista especialista em audiência de custódia e defesas urgentes. Atendimento 24h.">
+    <title>Alex Pires Advocacia – Família, Cível, Consumidor e Criminal</title>
+    <meta name="description" content="Alex Pires Advocacia. Atuação completa em Direito de Família, Cível, Consumidor e Criminal. Defesa jurídica especializada com excelência e ética. Atendimento 24h.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+
+    <!-- HEADER -->
+    <header class="header" id="top">
         <div class="container header-container">
             <div class="logo-area">
                 <img src="assets/logo - Alex Pires.jpeg" alt="Logo Alex Pires Advogado" class="logo">
-                <div class="logo-text">ADVOCACIA<br>CRIMINAL</div>
+                <div class="logo-text">ALEX PIRES<br><span>ADVOCACIA</span></div>
             </div>
-            <nav class="nav">
-                <a href="#sobre">Sobre</a>
+            <nav class="nav" id="main-nav">
                 <a href="#areas">Áreas de Atuação</a>
+                <a href="#sobre">Sobre</a>
                 <a href="#diferenciais">Diferenciais</a>
                 <a href="#depoimentos">Depoimentos</a>
-                <a href="#blog">Blog</a>
+                <a href="#contato">Contato</a>
             </nav>
             <a href="https://wa.me/5521992044079" target="_blank" class="btn btn-calendar">
-                <i class="fa-regular fa-calendar"></i> Agendar Consulta
+                <i class="fa-regular fa-calendar"></i> Consulta
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#areas" class="mobile-link">Áreas de Atuação</a>
+            <a href="#sobre" class="mobile-link">Sobre</a>
+            <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+            <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+            <a href="#contato" class="mobile-link">Contato</a>
+            <a href="https://wa.me/5521992044079" target="_blank" class="mobile-link mobile-cta">
+                <i class="fa-brands fa-whatsapp"></i> Falar com Advogado
             </a>
         </div>
     </header>
 
     <main>
+
+        <!-- HERO SECTION -->
         <section class="hero">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
+
                 <div class="hero-text-area reveal">
-                    <h3 class="hero-subtitle">DEFESA PENAL ESTRATÉGICA</h3>
-                    <h1>LIBERDADE É<br><span class="highlight">UM DIREITO.</span></h1>
-                    <h2 class="hero-mission">SUA DEFESA É NOSSA MISSÃO.</h2>
-                    <p>Atuação especializada em audiências de custódia<br>e emergências criminais, com excelência,<br>combatividade e estratégia.</p>
-                    
+                    <p class="hero-eyebrow"><i class="fa-solid fa-scale-balanced"></i> ADVOCACIA DE EXCELÊNCIA</p>
+                    <h1>JUSTIÇA É<br><span class="highlight">UM DIREITO.</span></h1>
+                    <h2 class="hero-mission">SEU FUTURO É NOSSA RESPONSABILIDADE.</h2>
+                    <p class="hero-description">Atuação jurídica completa e estratégica nas áreas de Família, Cível, Consumidor e Criminal. Defesa comprometida com resultados, ética e sigilo.</p>
+
+                    <!-- Area Pills -->
+                    <div class="area-pills">
+                        <a href="#familia" class="pill"><i class="fa-solid fa-heart"></i> Família</a>
+                        <a href="#civel" class="pill"><i class="fa-solid fa-file-contract"></i> Cível</a>
+                        <a href="#consumidor" class="pill"><i class="fa-solid fa-shield-halved"></i> Consumidor</a>
+                        <a href="#criminal" class="pill"><i class="fa-solid fa-gavel"></i> Criminal</a>
+                    </div>
+
                     <div class="hero-buttons">
                         <a href="https://wa.me/5521992044079" target="_blank" class="btn btn-primary">
-                            <i class="fa-solid fa-scale-balanced"></i> FALAR COM ADVOGADO AGORA
+                            <i class="fa-solid fa-scale-balanced"></i> FALAR COM ADVOGADO
                         </a>
                         <a href="https://wa.me/5521992044079" target="_blank" class="btn btn-outline-white">
                             <i class="fa-brands fa-whatsapp"></i> ATENDIMENTO 24H
                         </a>
                     </div>
-                    
+
                     <div class="trust-badge">
                         <i class="fa-solid fa-shield-halved"></i> ATENDIMENTO SIGILOSO E IMEDIATO
                     </div>
                 </div>
 
-                <div class="hero-visuals">
-                    <img src="assets/Perfil - Alex Pires 2.png" alt="Dr. Alex Pires" class="doctor-img">
-                    
-                    <div class="quote-box">
-                        <i class="fa-solid fa-quote-left quote-icon"></i>
-                        <div class="typewriter" id="typewriter-text"></div>
-                        <p class="quote-author">– Dr. Alex Pires</p>
+                <div class="hero-visuals reveal-right">
+                    <div class="justice-wrapper">
+                        <div class="justice-glow"></div>
+                        <img src="assets/lady-justice.png" alt="Estátua da Justiça" class="justice-img">
                     </div>
                 </div>
+
             </div>
 
-            <!-- Marquee Carousel -->
+            <!-- Marquee -->
             <div class="marquee-container">
                 <div class="marquee-content">
-                    <div class="marquee-item"><i class="fa-solid fa-bolt"></i> ATENDIMENTO IMEDIATO 24H</div>
-                    <div class="marquee-item"><i class="fa-solid fa-shield-halved"></i> ESPECIALISTA EM AUDIÊNCIAS DE CUSTÓDIA</div>
+                    <div class="marquee-item"><i class="fa-solid fa-heart"></i> DIREITO DE FAMÍLIA</div>
+                    <div class="marquee-item"><i class="fa-solid fa-file-contract"></i> DIREITO CÍVEL</div>
+                    <div class="marquee-item"><i class="fa-solid fa-shield-halved"></i> DIREITO DO CONSUMIDOR</div>
+                    <div class="marquee-item"><i class="fa-solid fa-gavel"></i> DIREITO CRIMINAL</div>
+                    <div class="marquee-item"><i class="fa-solid fa-bolt"></i> ATENDIMENTO 24H</div>
+                    <div class="marquee-item"><i class="fa-solid fa-lock"></i> SIGILO ABSOLUTO</div>
                     <div class="marquee-item"><i class="fa-solid fa-map-location-dot"></i> ATUAÇÃO NACIONAL</div>
-                    <div class="marquee-item"><i class="fa-solid fa-chess-knight"></i> ESTRATÉGIA PERSONALIZADA</div>
-                    <div class="marquee-item"><i class="fa-solid fa-lock"></i> SIGILO ABSOLUTO E ÉTICA PROFISSIONAL</div>
-                    <!-- Duplicate for infinite effect -->
-                    <div class="marquee-item"><i class="fa-solid fa-bolt"></i> ATENDIMENTO IMEDIATO 24H</div>
-                    <div class="marquee-item"><i class="fa-solid fa-shield-halved"></i> ESPECIALISTA EM AUDIÊNCIAS DE CUSTÓDIA</div>
+                    <!-- duplicate -->
+                    <div class="marquee-item"><i class="fa-solid fa-heart"></i> DIREITO DE FAMÍLIA</div>
+                    <div class="marquee-item"><i class="fa-solid fa-file-contract"></i> DIREITO CÍVEL</div>
+                    <div class="marquee-item"><i class="fa-solid fa-shield-halved"></i> DIREITO DO CONSUMIDOR</div>
+                    <div class="marquee-item"><i class="fa-solid fa-gavel"></i> DIREITO CRIMINAL</div>
+                    <div class="marquee-item"><i class="fa-solid fa-bolt"></i> ATENDIMENTO 24H</div>
+                    <div class="marquee-item"><i class="fa-solid fa-lock"></i> SIGILO ABSOLUTO</div>
                     <div class="marquee-item"><i class="fa-solid fa-map-location-dot"></i> ATUAÇÃO NACIONAL</div>
-                    <div class="marquee-item"><i class="fa-solid fa-chess-knight"></i> ESTRATÉGIA PERSONALIZADA</div>
-                    <div class="marquee-item"><i class="fa-solid fa-lock"></i> SIGILO ABSOLUTO E ÉTICA PROFISSIONAL</div>
                 </div>
             </div>
         </section>
 
-        <!-- (Other sections remain simplified for now, as focus is Hero overhaul) -->
-        <section id="areas" class="services reveal">
+        <!-- AREAS DE ATUAÇÃO -->
+        <section id="areas" class="areas-section reveal">
             <div class="container">
-                <div class="services-header">
-                    <h3 class="hero-subtitle">ÁREAS DE ATUAÇÃO</h3>
-                    <h2 class="section-title">Defesa Penal Completa</h2>
-                    <p>Atuação estratégica em todas as fases do processo penal, com foco na proteção dos seus direitos e na conquista dos melhores resultados.</p>
+                <div class="section-header">
+                    <p class="section-eyebrow">ATUAÇÃO COMPLETA</p>
+                    <h2 class="section-title">Nossas Áreas de Expertise</h2>
+                    <p class="section-desc">Soluções jurídicas precisas e personalizadas para cada momento da sua vida. Conheça como podemos ajudá-lo.</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <i class="fa-solid fa-gavel service-icon"></i>
-                        <h3>Audiências de Custódia</h3>
+
+                <!-- FAMÍLIA -->
+                <div class="area-block" id="familia">
+                    <div class="area-icon-col">
+                        <div class="area-icon-wrap" style="--area-color: #c9634a;">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="area-line"></div>
                     </div>
-                    <div class="service-card">
-                        <i class="fa-solid fa-handcuffs service-icon"></i>
-                        <h3>Prisão em Flagrante</h3>
+                    <div class="area-content">
+                        <div class="area-tag" style="--area-color: #c9634a;">Direito de Família</div>
+                        <h3>Protegendo o que há de mais importante: sua família</h3>
+                        <p>Questões familiares exigem sensibilidade, discrição e expertise técnica. Atuamos com profundidade em todas as demandas do Direito de Família, garantindo que seus direitos e os dos seus filhos sejam preservados em qualquer circunstância.</p>
+                        <div class="area-services">
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Divórcio consensual e litigioso</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Guarda e regulamentação de visitas</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Pensão alimentícia (fixação e revisão)</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Partilha de bens e inventário</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> União estável e reconhecimento de paternidade</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Curatela e tutela</div>
+                        </div>
+                        <a href="https://wa.me/5521992044079?text=Olá,%20preciso%20de%20ajuda%20com%20Direito%20de%20Família" target="_blank" class="area-cta">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar sobre Família
+                        </a>
                     </div>
-                    <div class="service-card">
-                        <i class="fa-solid fa-shield service-icon"></i>
-                        <h3>Habeas Corpus</h3>
+                </div>
+
+                <!-- CÍVEL -->
+                <div class="area-block" id="civel">
+                    <div class="area-icon-col">
+                        <div class="area-icon-wrap" style="--area-color: #4a7fc9;">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <div class="area-line"></div>
                     </div>
-                    <div class="service-card">
-                        <i class="fa-solid fa-file-contract service-icon"></i>
-                        <h3>Recursos Criminais</h3>
+                    <div class="area-content">
+                        <div class="area-tag" style="--area-color: #4a7fc9;">Direito Cível</div>
+                        <h3>Soluções sólidas para conflitos civis e patrimoniais</h3>
+                        <p>Litígios civis podem envolver desde contratos até questões imobiliárias e responsabilidade civil. Nossa atuação estratégica busca sempre a solução mais eficiente e vantajosa para o cliente, seja por negociação, mediação ou processo judicial.</p>
+                        <div class="area-services">
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Contratos — revisão, rescisão e disputas</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Responsabilidade civil e danos morais</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Ações possessórias e imobiliárias</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Cobrança e execução de dívidas</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Direito das sucessões e heranças</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Mediação e acordos extrajudiciais</div>
+                        </div>
+                        <a href="https://wa.me/5521992044079?text=Olá,%20preciso%20de%20ajuda%20com%20Direito%20Cível" target="_blank" class="area-cta" style="--area-color: #4a7fc9; --area-color-hover: #3a6ab9;">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar sobre Cível
+                        </a>
                     </div>
-                    <div class="service-card">
-                        <i class="fa-solid fa-users service-icon"></i>
-                        <h3>Tribunal do Júri</h3>
+                </div>
+
+                <!-- CONSUMIDOR -->
+                <div class="area-block" id="consumidor">
+                    <div class="area-icon-col">
+                        <div class="area-icon-wrap" style="--area-color: #4ab87f;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="area-line"></div>
+                    </div>
+                    <div class="area-content">
+                        <div class="area-tag" style="--area-color: #4ab87f;">Direito do Consumidor</div>
+                        <h3>Seus direitos como consumidor protegidos com força total</h3>
+                        <p>O Código de Defesa do Consumidor garante ampla proteção aos seus direitos. Nossa equipe combate práticas abusivas, cobranças indevidas e falhas de produtos e serviços, buscando a justa reparação que você merece.</p>
+                        <div class="area-services">
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Cobranças indevidas e negativação ilegal</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Produtos defeituosos e acidentes de consumo</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Planos de saúde — negativa de cobertura</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Falhas em serviços (bancos, telefonias, etc.)</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Cancelamentos e reembolsos</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Publicidade enganosa e práticas abusivas</div>
+                        </div>
+                        <a href="https://wa.me/5521992044079?text=Olá,%20preciso%20de%20ajuda%20com%20Direito%20do%20Consumidor" target="_blank" class="area-cta" style="--area-color: #4ab87f; --area-color-hover: #3aa870;">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar sobre Consumidor
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CRIMINAL -->
+                <div class="area-block" id="criminal">
+                    <div class="area-icon-col">
+                        <div class="area-icon-wrap" style="--area-color: #c92c2c;">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <!-- No line after last item -->
+                    </div>
+                    <div class="area-content">
+                        <div class="area-tag" style="--area-color: #c92c2c;">Direito Criminal</div>
+                        <h3>Defesa penal estratégica, combativa e imediata</h3>
+                        <p>Quando a liberdade está em jogo, cada segundo conta. Atuamos com urgência, estratégia e total comprometimento na defesa dos seus direitos fundamentais, em todas as fases do processo penal e em qualquer situação de emergência criminal.</p>
+                        <div class="area-services">
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Audiências de custódia — atuação imediata</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Prisão em flagrante e preventiva</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Habeas Corpus e liberdade provisória</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Tribunal do Júri — crimes dolosos contra vida</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Recursos criminais e revisões</div>
+                            <div class="area-service-item"><i class="fa-solid fa-check"></i> Crimes contra honra, patrimônio e tráfico</div>
+                        </div>
+                        <a href="https://wa.me/5521992044079?text=Preciso%20de%20ajuda%20URGENTE%20em%20caso%20criminal" target="_blank" class="area-cta" style="--area-color: #c92c2c; --area-color-hover: #a31c1c;">
+                            <i class="fa-solid fa-bolt"></i> EMERGÊNCIA CRIMINAL — CONTATO AGORA
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="about-section reveal">
+            <div class="container about-container">
+                <div class="about-text">
+                    <p class="section-eyebrow">QUEM SOMOS</p>
+                    <h2 class="section-title">Alex Pires Advocacia</h2>
+                    <p>Com atuação abrangente e especializada, o escritório Alex Pires Advocacia é referência em atendimento jurídico humanizado e de alta performance. Nosso compromisso é oferecer defesa e orientação jurídica de excelência em todas as frentes que impactam a vida dos nossos clientes.</p>
+                    <p>Da urgência de uma prisão em flagrante ao acompanhamento estratégico de um processo de divórcio ou litígio cível, estamos ao lado dos nossos clientes com dedicação, ética e transparência.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">+500</span>
+                            <span class="stat-label">Casos Atendidos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Áreas de Atuação</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24h</span>
+                            <span class="stat-label">Disponibilidade</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Sigiloso</span>
+                        </div>
+                    </div>
+                    <div class="about-oab">
+                        <i class="fa-solid fa-id-card"></i>
+                        <span>OAB/RJ nº 244624 — Dr. Alex Pires</span>
+                    </div>
+                </div>
+                <div class="about-card-col">
+                    <div class="about-card">
+                        <i class="fa-solid fa-quote-left about-quote-icon"></i>
+                        <p>"Não há causa indigna de defesa. A justiça, quando negada ao mais vulnerável, é negada a todos."</p>
+                        <span>— Dr. Alex Pires</span>
+                    </div>
+                    <div class="about-badges">
+                        <div class="about-badge"><i class="fa-solid fa-heart"></i> Família</div>
+                        <div class="about-badge"><i class="fa-solid fa-file-contract"></i> Cível</div>
+                        <div class="about-badge"><i class="fa-solid fa-shield-halved"></i> Consumidor</div>
+                        <div class="about-badge"><i class="fa-solid fa-gavel"></i> Criminal</div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- DIFERENCIAIS -->
+        <section id="diferenciais" class="diferenciais-section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-eyebrow">POR QUE NOS ESCOLHER</p>
+                    <h2 class="section-title">Nossos Diferenciais</h2>
+                </div>
+                <div class="diferenciais-grid">
+                    <div class="diferencial-card">
+                        <i class="fa-solid fa-bolt diferencial-icon"></i>
+                        <h3>Atuação Imediata</h3>
+                        <p>Disponíveis 24 horas por dia, 7 dias por semana para emergências jurídicas em qualquer área.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <i class="fa-solid fa-chess-knight diferencial-icon"></i>
+                        <h3>Estratégia Personalizada</h3>
+                        <p>Cada caso é único. Desenvolvemos soluções jurídicas sob medida para a sua situação específica.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <i class="fa-solid fa-lock diferencial-icon"></i>
+                        <h3>Sigilo Absoluto</h3>
+                        <p>Todas as informações compartilhadas são protegidas pelo mais rigoroso sigilo profissional.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <i class="fa-solid fa-map-location-dot diferencial-icon"></i>
+                        <h3>Atuação Nacional</h3>
+                        <p>Representamos clientes em todo o território nacional, com foco especial no Rio de Janeiro.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <i class="fa-solid fa-handshake diferencial-icon"></i>
+                        <h3>Transparência Total</h3>
+                        <p>Informamos cada etapa do processo com clareza, sem juridiquês, para que você decida com segurança.</p>
+                    </div>
+                    <div class="diferencial-card">
+                        <i class="fa-solid fa-award diferencial-icon"></i>
+                        <h3>Excelência Comprovada</h3>
+                        <p>Histórico sólido de resultados nas mais diversas frentes jurídicas com mais de 500 casos atendidos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section id="depoimentos" class="testimonials-section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-eyebrow">O QUE DIZEM</p>
+                    <h2 class="section-title">Depoimentos de Clientes</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"O Dr. Alex resolveu meu processo de divórcio com muita sensibilidade e competência. Fui tratada com respeito em todo momento."</p>
+                        <div class="testimonial-author"><i class="fa-solid fa-user-circle"></i> M.S. — Direito de Família</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"Conseguiu reverter uma cobrança indevida que meu banco fazia há meses. Rápido, eficiente e comprometido com o resultado."</p>
+                        <div class="testimonial-author"><i class="fa-solid fa-user-circle"></i> R.C. — Direito do Consumidor</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"Atendimento imediato na madrugada quando precisei. Profissionalismo e clareza em um momento de total desespero. Minha família agradece."</p>
+                        <div class="testimonial-author"><i class="fa-solid fa-user-circle"></i> F.L. — Direito Criminal</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-section reveal">
+            <div class="container cta-container">
+                <div class="cta-content">
+                    <i class="fa-solid fa-scale-balanced cta-icon"></i>
+                    <h2>Precisa de orientação jurídica?</h2>
+                    <p>Entre em contato agora. Primeira consulta com análise do seu caso.</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/5521992044079" target="_blank" class="btn btn-primary btn-lg">
+                            <i class="fa-brands fa-whatsapp"></i> FALAR AGORA NO WHATSAPP
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer id="contato" class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
                 <img src="assets/logo - Alex Pires.jpeg" alt="Logo Alex Pires" class="footer-logo">
-                <p>Advocacia Criminal de Excelência</p>
+                <p class="footer-tagline">Advocacia de Excelência</p>
+                <p class="footer-areas">Família · Cível · Consumidor · Criminal</p>
             </div>
             <div class="footer-contact">
                 <h4>Contato</h4>
@@ -131,20 +377,28 @@
                 <p><i class="fa-solid fa-envelope"></i> alex.pires.juridico@gmail.com</p>
                 <p><i class="fa-solid fa-id-card"></i> OAB/RJ: 244624</p>
             </div>
+            <div class="footer-areas-col">
+                <h4>Áreas</h4>
+                <p><a href="#familia"><i class="fa-solid fa-heart"></i> Família</a></p>
+                <p><a href="#civel"><i class="fa-solid fa-file-contract"></i> Cível</a></p>
+                <p><a href="#consumidor"><i class="fa-solid fa-shield-halved"></i> Consumidor</a></p>
+                <p><a href="#criminal"><i class="fa-solid fa-gavel"></i> Criminal</a></p>
+            </div>
             <div class="footer-social">
                 <h4>Redes Sociais</h4>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/alexpires.adv/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5521992044079" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="mailto:alex.pires.juridico@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Alex Pires Advogado Criminalista. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Alex Pires Advocacia. Todos os direitos reservados. | OAB/RJ 244624</p>
         </div>
     </footer>
 
-    <!-- Botão de WhatsApp Flutuante -->
+    <!-- WhatsApp Flutuante -->
     <a href="https://wa.me/5521992044079" target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
