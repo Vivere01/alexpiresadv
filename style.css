@@ -431,55 +431,94 @@ a {
     color: var(--primary-red);
 }
 
-/* Hero Visuals — Lady Justice */
+/* Hero Visuals — Logo Animado */
 .hero-visuals {
     flex: 0 0 45%;
     position: relative;
     align-self: stretch;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     min-height: calc(100vh - 80px);
     min-width: 0;
 }
 
-.justice-wrapper {
+.logo-hero-wrapper {
     position: relative;
-    width: 100%;
-    height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
+    width: 360px;
+    height: 360px;
 }
 
-.justice-glow {
+.logo-hero-glow {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    height: 500px;
-    background: radial-gradient(ellipse at center bottom, rgba(201, 44, 44, 0.08) 0%, transparent 70%);
+    inset: -60px;
+    background: radial-gradient(ellipse at center,
+        rgba(201, 44, 44, 0.22) 0%,
+        rgba(201, 44, 44, 0.06) 45%,
+        transparent 70%);
+    border-radius: 50%;
+    animation: logoGlowPulse 3.5s ease-in-out infinite;
     pointer-events: none;
     z-index: 0;
 }
 
-.justice-img {
+.logo-hero-img {
     position: relative;
     z-index: 2;
-    height: 90%;
-    max-height: 720px;
-    width: auto;
+    width: 300px;
+    height: 300px;
     object-fit: contain;
-    object-position: bottom;
-    filter: drop-shadow(0 0 25px rgba(201, 44, 44, 0.2))
-            drop-shadow(0 10px 40px rgba(0,0,0,0.12));
-    transition: var(--transition);
+    border-radius: 28px;
+    box-shadow:
+        0 0 0 2px rgba(201, 44, 44, 0.35),
+        0 0 0 10px rgba(201, 44, 44, 0.07),
+        0 30px 90px rgba(0, 0, 0, 0.45),
+        0 0 60px rgba(201, 44, 44, 0.18);
+
+    /* 1ª anim: revelar traço a traço (bottom → top) */
+    /* 2ª anim: flutuar suavemente após o reveal       */
+    animation:
+        logoDrawReveal 2.2s cubic-bezier(0.22, 1, 0.36, 1) both,
+        logoFloat      5s  ease-in-out 2.2s infinite;
 }
 
-.justice-img:hover {
-    filter: drop-shadow(0 0 40px rgba(201, 44, 44, 0.35))
-            drop-shadow(0 10px 50px rgba(0,0,0,0.15));
+/* === Reveal "traço a traço" === */
+@keyframes logoDrawReveal {
+    0% {
+        clip-path: inset(100% 0 0 0 round 28px);
+        opacity: 0;
+        transform: scale(0.88);
+    }
+    15% { opacity: 1; }
+    55% {
+        clip-path: inset(25% 0 0 0 round 28px);
+        transform: scale(0.96);
+    }
+    82% {
+        clip-path: inset(3% 0 0 0 round 28px);
+        transform: scale(1.02);
+    }
+    100% {
+        clip-path: inset(0% 0 0 0 round 28px);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === Flutuação contínua === */
+@keyframes logoFloat {
+    0%,  100% { transform: translateY(0px) rotate(0deg); }
+    30%        { transform: translateY(-14px) rotate(0.4deg); }
+    60%        { transform: translateY(-9px) rotate(-0.3deg); }
+}
+
+/* === Pulso do brilho === */
+@keyframes logoGlowPulse {
+    0%,  100% { opacity: 0.55; transform: scale(1); }
+    50%        { opacity: 1;    transform: scale(1.12); }
 }
 
 /* === MARQUEE === */
@@ -1447,14 +1486,14 @@ a {
         height: 380px;
         justify-content: center;
     }
-    .justice-wrapper {
+    .logo-hero-wrapper {
+        width: 280px;
+        height: 280px;
         justify-content: center;
     }
-    .justice-img {
-        max-height: 360px;
-        height: 100%;
-        width: auto;
-        max-width: 100%;
+    .logo-hero-img {
+        width: 240px;
+        height: 240px;
     }
 
     /* About */
@@ -1672,8 +1711,13 @@ a {
         min-height: 320px;
         height: 320px;
     }
-    .justice-img {
-        max-height: 300px;
+    .logo-hero-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+    .logo-hero-img {
+        width: 190px;
+        height: 190px;
     }
 
     /* Pills */
