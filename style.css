@@ -786,8 +786,8 @@ a {
 
 .about-container {
     display: flex;
-    gap: 80px;
-    align-items: center;
+    gap: 60px;
+    align-items: flex-start;
     position: relative;
     z-index: 1;
 }
@@ -830,6 +830,8 @@ a {
 
 .about-text {
     flex: 1;
+    align-self: center;
+    max-width: 480px;
 }
 
 .about-text .section-eyebrow {
