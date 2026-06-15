@@ -33,7 +33,7 @@ if (hamburger && mobileMenu) {
 
 // === SCROLL REVEAL ===
 function reveal() {
-    const reveals = document.querySelectorAll('.reveal, .reveal-right');
+    const reveals = document.querySelectorAll('.reveal, .reveal-right, .reveal-left');
     const windowHeight = window.innerHeight;
 
     reveals.forEach(el => {
